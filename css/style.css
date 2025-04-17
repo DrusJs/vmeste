@@ -222,7 +222,16 @@ button {
     background-position: center;
 }
 
-.swiper-button--blue {
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-next {
+    transform: rotate(180deg);
+}
+
+.swiper-button.swiper-button--blue {
     background-color: rgba(145, 185, 224, 0.4);
 }
 
@@ -413,6 +422,7 @@ input:checked + .input-checkbox::before {
     position: absolute;
     top: 124px;
     right: 0;
+    max-width: 400px;
 }
 
 .burger-menu a {
@@ -513,10 +523,9 @@ input:checked + .input-checkbox::before {
 }
 
 .support-section__swiper {
-    margin-top: 40px;
+    padding: 40px 30px 60px;
     display: flex;
-    gap: 73px;
-    max-width: 980px;
+    max-width: 1060px;
     width: 100%;
 }
 
@@ -528,6 +537,7 @@ input:checked + .input-checkbox::before {
 
 .swiper-item__img {
     border-radius: 10px;
+    width: 100%;
 }
 
 .swiper-item__text-wrapper {
@@ -654,8 +664,9 @@ input:checked + .input-checkbox::before {
 
 .news-section__swiper {
     margin-top: 60px;
+    padding: 0 80px;
     display: flex;
-    max-width: 780px;
+    max-width: 940px;
     width: 100%;
 }
 

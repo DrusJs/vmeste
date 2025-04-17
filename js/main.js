@@ -12,3 +12,28 @@ if (burgerMenu && burgerButton) {
         }
     })
 }
+
+
+
+const swiperMain = new Swiper(".support-section__swiper", {
+    slidesPerView: 3,
+    centeredSlides: true,
+    spaceBetween: 80,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+const swiperNews = new Swiper(".news-section__swiper", {
+    slidesPerView: 3,
+    centeredSlides: true,
+    spaceBetween: 80,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});

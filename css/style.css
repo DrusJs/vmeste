@@ -107,7 +107,8 @@ button {
 
 .container {
     margin: 0 auto;
-    max-width: 1260px;
+    max-width: 1360px;
+    padding: 0 50px;
     width: 100%;
     display: flex;
 }
@@ -329,6 +330,7 @@ input:checked + .input-checkbox::before {
 .header .container {
     justify-content: space-between;
     align-items: center;
+    gap: 80px;
 }
 
 .logo-container {
@@ -377,6 +379,10 @@ input:checked + .input-checkbox::before {
     flex-direction: column;
 }
 
+.header-content__links.mobile {
+    display: none;
+}
+
 .header-content__links a {
     display: flex;
     align-items: center;
@@ -389,7 +395,7 @@ input:checked + .input-checkbox::before {
     text-underline-offset: 4px;
 }
 
-.burger-menu {
+.burger-button {
     border-radius: 11px;
     background-color: #F3A0AF;
     width: 78px;
@@ -397,6 +403,10 @@ input:checked + .input-checkbox::before {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.burger-menu {
+    display: none;
 }
 
 /* hero-section */
@@ -1752,24 +1762,26 @@ input:checked + .input-checkbox::before {
     
 }
 
-.footer-top .container {
- 
+.footer-top .container { 
     display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
     width: 100%;
     justify-content: space-between;
 }
 
 .nav {
-    max-width: 885px;
+    max-width: 920px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 40px;
 }
 
 .footer-list {
     display: flex;
     flex-direction: column;
-    max-width: 270px;
+    max-width: 250px;
     width: 100%;
 }
 
@@ -1830,4 +1842,29 @@ input:checked + .input-checkbox::before {
     align-items: center;
     gap: 10px;
     margin-left: auto;
+}
+
+
+@media (max-width: 996px) {
+    .logo-text {
+        display: none;
+    }
+
+    .projects-section .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-content__links {
+        display: none;
+    }
+    
+    .header-content__links.mobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 756px) {
+    .container {
+        padding: 0 16px;
+    }
 }

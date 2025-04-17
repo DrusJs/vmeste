@@ -14,9 +14,9 @@ if (burgerMenu && burgerButton) {
 }
 
 
-
+// 1240
 const swiperMain = new Swiper(".support-section__swiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 80,
     loop: true,
@@ -24,11 +24,21 @@ const swiperMain = new Swiper(".support-section__swiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        1240: {
+            slidesPerView: 3,
+            centeredSlides: true,
+        },
+        756: {
+            slidesPerView: 2,
+            centeredSlides: false,
+        }
+    }
 });
 
 
 const swiperNews = new Swiper(".news-section__swiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 80,
     loop: true,
@@ -36,4 +46,14 @@ const swiperNews = new Swiper(".news-section__swiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        1240: {
+            slidesPerView: 3,
+            centeredSlides: true,
+        },
+        756: {
+            slidesPerView: 2,
+            centeredSlides: false,
+        }
+    }
 });
